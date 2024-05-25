@@ -23,7 +23,7 @@ body {
     z-index: 20;
 }
 
-#background-display {
+#background-list {
     visibility: hidden;
     z-index: 40;
     display: flex;
@@ -41,7 +41,7 @@ body {
     align-content: space-between;
 }
 
-#background-display::after {
+#background-list::after {
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
 
@@ -59,7 +59,7 @@ body {
     filter: blur(4px);
 }
 
-#bg-select {
+#bg-select-button {
     z-index: 60;
 }
 

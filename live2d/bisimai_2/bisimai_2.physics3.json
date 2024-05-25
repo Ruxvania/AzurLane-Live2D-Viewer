@@ -3,7 +3,7 @@
   "Meta": {
     "PhysicsSettingCount": 5,
     "TotalInputCount": 5,
-    "TotalOutputCount": 11,
+    "TotalOutputCount": 9,
     "VertexCount": 11,
     "EffectiveForces": {
       "Gravity": {
@@ -45,9 +45,9 @@
         {
           "Source": {
             "Target": "Parameter",
-            "Id": "ParamBodyAngleX"
+            "Id": "ParamAngleX"
           },
-          "Weight": 80,
+          "Weight": 100,
           "Type": "X",
           "Reflect": false
         }
@@ -59,18 +59,7 @@
             "Id": "zuoopzuoyou"
           },
           "VertexIndex": 1,
-          "Scale": 1.6,
-          "Weight": 100,
-          "Type": "Angle",
-          "Reflect": false
-        },
-        {
-          "Destination": {
-            "Target": "Parameter",
-            "Id": "youopzuoyou"
-          },
-          "VertexIndex": 1,
-          "Scale": 1.2,
+          "Scale": 1,
           "Weight": 100,
           "Type": "Angle",
           "Reflect": false
@@ -117,9 +106,9 @@
         {
           "Source": {
             "Target": "Parameter",
-            "Id": "ParamBodyAngleX"
+            "Id": "ParamAngleY"
           },
-          "Weight": 80,
+          "Weight": 100,
           "Type": "X",
           "Reflect": false
         }
@@ -131,18 +120,7 @@
             "Id": "zuoopshangxia"
           },
           "VertexIndex": 1,
-          "Scale": 3,
-          "Weight": 100,
-          "Type": "Angle",
-          "Reflect": false
-        },
-        {
-          "Destination": {
-            "Target": "Parameter",
-            "Id": "youopshangxia"
-          },
-          "VertexIndex": 1,
-          "Scale": 2,
+          "Scale": 1,
           "Weight": 100,
           "Type": "Angle",
           "Reflect": false

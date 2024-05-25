@@ -5,6 +5,8 @@
     "Fps": 30.0,
     "Loop": true,
     "AreBeziersRestricted": true,
+    "FadeInTime": 0.0,
+    "FadeOutTime": 0.0,
     "CurveCount": 3,
     "TotalSegmentCount": 11,
     "TotalPointCount": 11,
@@ -15,6 +17,8 @@
     {
       "Target": "Parameter",
       "Id": "Param25",
+      "FadeInTime": -1.0,
+      "FadeOutTime": -1.0,
       "Segments": [
         0,
         0,
@@ -47,6 +51,8 @@
     {
       "Target": "Model",
       "Id": "Opacity",
+      "FadeInTime": -1.0,
+      "FadeOutTime": -1.0,
       "Segments": [
         0,
         1,
@@ -58,6 +64,8 @@
     {
       "Target": "Parameter",
       "Id": "Param235",
+      "FadeInTime": -1.0,
+      "FadeOutTime": -1.0,
       "Segments": [
         0,
         1,

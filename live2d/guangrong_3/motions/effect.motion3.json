@@ -5,6 +5,8 @@
     "Fps": 30.0,
     "Loop": true,
     "AreBeziersRestricted": true,
+    "FadeInTime": 0.0,
+    "FadeOutTime": 0.0,
     "CurveCount": 10,
     "TotalSegmentCount": 46,
     "TotalPointCount": 70,
@@ -15,6 +17,8 @@
     {
       "Target": "Parameter",
       "Id": "Param129",
+      "FadeInTime": -1.0,
+      "FadeOutTime": -1.0,
       "Segments": [
         0,
         1,
@@ -47,6 +51,8 @@
     {
       "Target": "Parameter",
       "Id": "Param128",
+      "FadeInTime": -1.0,
+      "FadeOutTime": -1.0,
       "Segments": [
         0,
         0,
@@ -79,6 +85,8 @@
     {
       "Target": "Parameter",
       "Id": "Paramhuaxz2",
+      "FadeInTime": -1.0,
+      "FadeOutTime": -1.0,
       "Segments": [
         0,
         0.6,
@@ -94,6 +102,8 @@
     {
       "Target": "Parameter",
       "Id": "Paramhuaxz1",
+      "FadeInTime": -1.0,
+      "FadeOutTime": -1.0,
       "Segments": [
         0,
         0.3,
@@ -109,6 +119,8 @@
     {
       "Target": "Parameter",
       "Id": "Paramhua3",
+      "FadeInTime": -1.0,
+      "FadeOutTime": -1.0,
       "Segments": [
         0,
         0.9,
@@ -124,6 +136,8 @@
     {
       "Target": "Parameter",
       "Id": "Paramhua2",
+      "FadeInTime": -1.0,
+      "FadeOutTime": -1.0,
       "Segments": [
         0,
         0.6,
@@ -139,6 +153,8 @@
     {
       "Target": "Parameter",
       "Id": "Paramhua1",
+      "FadeInTime": -1.0,
+      "FadeOutTime": -1.0,
       "Segments": [
         0,
         0.2,
@@ -154,6 +170,8 @@
     {
       "Target": "Parameter",
       "Id": "yan",
+      "FadeInTime": -1.0,
+      "FadeOutTime": -1.0,
       "Segments": [
         0,
         0,
@@ -182,6 +200,8 @@
     {
       "Target": "Parameter",
       "Id": "water",
+      "FadeInTime": -1.0,
+      "FadeOutTime": -1.0,
       "Segments": [
         0,
         0,
@@ -240,6 +260,8 @@
     {
       "Target": "Parameter",
       "Id": "Param52",
+      "FadeInTime": -1.0,
+      "FadeOutTime": -1.0,
       "Segments": [
         0,
         1,

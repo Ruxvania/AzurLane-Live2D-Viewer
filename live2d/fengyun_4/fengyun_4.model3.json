@@ -1,15 +1,22 @@
 {
   "Version": 3,
+  "Name": "fengyun_4",
   "FileReferences": {
     "Moc": "fengyun_4.moc3",
     "Textures": [
       "textures/texture_00.png"
     ],
+    "DisplayInfo": null,
     "Physics": "fengyun_4.physics3.json",
     "Motions": {
-      "wedding": [
+      "complete": [
         {
-          "File": "motions/wedding.motion3.json"
+          "File": "motions/complete.motion3.json"
+        }
+      ],
+      "effect": [
+        {
+          "File": "motions/effect.motion3.json"
         }
       ],
       "home": [
@@ -17,9 +24,29 @@
           "File": "motions/home.motion3.json"
         }
       ],
-      "touch_drag5": [
+      "idle": [
         {
-          "File": "motions/touch_drag5.motion3.json"
+          "File": "motions/idle.motion3.json"
+        }
+      ],
+      "login": [
+        {
+          "File": "motions/login.motion3.json"
+        }
+      ],
+      "mail": [
+        {
+          "File": "motions/mail.motion3.json"
+        }
+      ],
+      "main_1": [
+        {
+          "File": "motions/main_1.motion3.json"
+        }
+      ],
+      "main_2": [
+        {
+          "File": "motions/main_2.motion3.json"
         }
       ],
       "main_3": [
@@ -27,9 +54,14 @@
           "File": "motions/main_3.motion3.json"
         }
       ],
-      "touch_drag3": [
+      "mission": [
         {
-          "File": "motions/touch_drag3.motion3.json"
+          "File": "motions/mission.motion3.json"
+        }
+      ],
+      "mission_complete": [
+        {
+          "File": "motions/mission_complete.motion3.json"
         }
       ],
       "touch_body": [
@@ -42,9 +74,14 @@
           "File": "motions/touch_drag1.motion3.json"
         }
       ],
-      "mail": [
+      "touch_drag2": [
         {
-          "File": "motions/mail.motion3.json"
+          "File": "motions/touch_drag2.motion3.json"
+        }
+      ],
+      "touch_drag3": [
+        {
+          "File": "motions/touch_drag3.motion3.json"
         }
       ],
       "touch_drag4": [
@@ -52,9 +89,9 @@
           "File": "motions/touch_drag4.motion3.json"
         }
       ],
-      "main_2": [
+      "touch_drag5": [
         {
-          "File": "motions/main_2.motion3.json"
+          "File": "motions/touch_drag5.motion3.json"
         }
       ],
       "touch_head": [
@@ -62,63 +99,35 @@
           "File": "motions/touch_head.motion3.json"
         }
       ],
-      "login": [
-        {
-          "File": "motions/login.motion3.json"
-        }
-      ],
-      "main_1": [
-        {
-          "File": "motions/main_1.motion3.json"
-        }
-      ],
       "touch_special": [
         {
           "File": "motions/touch_special.motion3.json"
         }
       ],
-      "mission": [
+      "wedding": [
         {
-          "File": "motions/mission.motion3.json"
-        }
-      ],
-      "effect": [
-        {
-          "File": "motions/effect.motion3.json"
-        }
-      ],
-      "touch_drag2": [
-        {
-          "File": "motions/touch_drag2.motion3.json"
-        }
-      ],
-      "complete": [
-        {
-          "File": "motions/complete.motion3.json"
-        }
-      ],
-      "idle": [
-        {
-          "File": "motions/idle.motion3.json"
-        }
-      ],
-      "mission_complete": [
-        {
-          "File": "motions/mission_complete.motion3.json"
+          "File": "motions/wedding.motion3.json"
         }
       ]
-    }
+    },
+    "Expressions": []
   },
-  "Groups": [],
+  "Groups": [
+    {
+      "Target": "Parameter",
+      "Name": "EyeBlink",
+      "Ids": [
+        "ParamEyeLOpen",
+        "ParamEyeROpen"
+      ]
+    },
+    {
+      "Target": "Parameter",
+      "Name": "LipSync",
+      "Ids": []
+    }
+  ],
   "HitAreas": [
-    {
-      "Id": "TouchDrag5",
-      "Name": "touch_drag5"
-    },
-    {
-      "Id": "TouchDrag3",
-      "Name": "touch_drag3"
-    },
     {
       "Id": "TouchBody",
       "Name": "touch_body"
@@ -128,8 +137,20 @@
       "Name": "touch_drag1"
     },
     {
+      "Id": "TouchDrag2",
+      "Name": "touch_drag2"
+    },
+    {
+      "Id": "TouchDrag3",
+      "Name": "touch_drag3"
+    },
+    {
       "Id": "TouchDrag4",
       "Name": "touch_drag4"
+    },
+    {
+      "Id": "TouchDrag5",
+      "Name": "touch_drag5"
     },
     {
       "Id": "TouchHead",
@@ -138,10 +159,6 @@
     {
       "Id": "TouchSpecial",
       "Name": "touch_special"
-    },
-    {
-      "Id": "TouchDrag2",
-      "Name": "touch_drag2"
     }
   ]
 }

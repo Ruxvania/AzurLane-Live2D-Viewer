@@ -1,40 +1,17 @@
 {
   "Version": 3,
+  "Name": "weiyan_6",
   "FileReferences": {
     "Moc": "weiyan_6.moc3",
     "Textures": [
       "textures/texture_00.png"
     ],
+    "DisplayInfo": null,
     "Physics": "weiyan_6.physics3.json",
     "Motions": {
-      "login": [
+      "complete": [
         {
-          "File": "motions/login.motion3.json"
-        }
-      ],
-      "mission_complete": [
-        {
-          "File": "motions/mission_complete.motion3.json"
-        }
-      ],
-      "touch_special": [
-        {
-          "File": "motions/touch_special.motion3.json"
-        }
-      ],
-      "main_3": [
-        {
-          "File": "motions/main_3.motion3.json"
-        }
-      ],
-      "touch_body": [
-        {
-          "File": "motions/touch_body.motion3.json"
-        }
-      ],
-      "idle": [
-        {
-          "File": "motions/idle.motion3.json"
+          "File": "motions/complete.motion3.json"
         }
       ],
       "effect": [
@@ -42,9 +19,24 @@
           "File": "motions/effect.motion3.json"
         }
       ],
-      "mission": [
+      "home": [
         {
-          "File": "motions/mission.motion3.json"
+          "File": "motions/home.motion3.json"
+        }
+      ],
+      "idle": [
+        {
+          "File": "motions/idle.motion3.json"
+        }
+      ],
+      "login": [
+        {
+          "File": "motions/login.motion3.json"
+        }
+      ],
+      "mail": [
+        {
+          "File": "motions/mail.motion3.json"
         }
       ],
       "main_1": [
@@ -52,14 +44,29 @@
           "File": "motions/main_1.motion3.json"
         }
       ],
-      "complete": [
+      "main_2": [
         {
-          "File": "motions/complete.motion3.json"
+          "File": "motions/main_2.motion3.json"
         }
       ],
-      "home": [
+      "main_3": [
         {
-          "File": "motions/home.motion3.json"
+          "File": "motions/main_3.motion3.json"
+        }
+      ],
+      "mission": [
+        {
+          "File": "motions/mission.motion3.json"
+        }
+      ],
+      "mission_complete": [
+        {
+          "File": "motions/mission_complete.motion3.json"
+        }
+      ],
+      "touch_body": [
+        {
+          "File": "motions/touch_body.motion3.json"
         }
       ],
       "touch_head": [
@@ -67,29 +74,37 @@
           "File": "motions/touch_head.motion3.json"
         }
       ],
-      "main_2": [
+      "touch_special": [
         {
-          "File": "motions/main_2.motion3.json"
+          "File": "motions/touch_special.motion3.json"
         }
       ],
       "wedding": [
         {
           "File": "motions/wedding.motion3.json"
         }
-      ],
-      "mail": [
-        {
-          "File": "motions/mail.motion3.json"
-        }
+      ]
+    },
+    "Expressions": []
+  },
+  "Groups": [
+    {
+      "Target": "Parameter",
+      "Name": "EyeBlink",
+      "Ids": [
+        "ParamEyeROpen",
+        "ParamEyeLOpen"
+      ]
+    },
+    {
+      "Target": "Parameter",
+      "Name": "LipSync",
+      "Ids": [
+        "ParamMouthOpenY"
       ]
     }
-  },
-  "Groups": [],
+  ],
   "HitAreas": [
-    {
-      "Id": "TouchSpecial",
-      "Name": "touch_special"
-    },
     {
       "Id": "TouchBody",
       "Name": "touch_body"
@@ -97,6 +112,10 @@
     {
       "Id": "TouchHead",
       "Name": "touch_head"
+    },
+    {
+      "Id": "TouchSpecial",
+      "Name": "touch_special"
     }
   ]
 }

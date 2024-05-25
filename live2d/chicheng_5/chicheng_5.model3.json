@@ -1,30 +1,42 @@
 {
   "Version": 3,
+  "Name": "chicheng_5",
   "FileReferences": {
     "Moc": "chicheng_5.moc3",
     "Textures": [
       "textures/texture_00.png"
     ],
+    "DisplayInfo": null,
     "Physics": "chicheng_5.physics3.json",
     "Motions": {
+      "complete": [
+        {
+          "File": "motions/complete.motion3.json"
+        }
+      ],
+      "effect": [
+        {
+          "File": "motions/effect.motion3.json"
+        }
+      ],
+      "home": [
+        {
+          "File": "motions/home.motion3.json"
+        }
+      ],
       "idle": [
         {
           "File": "motions/idle.motion3.json"
         }
       ],
-      "touch_special": [
+      "login": [
         {
-          "File": "motions/touch_special.motion3.json"
+          "File": "motions/login.motion3.json"
         }
       ],
-      "mission": [
+      "mail": [
         {
-          "File": "motions/mission.motion3.json"
-        }
-      ],
-      "complete": [
-        {
-          "File": "motions/complete.motion3.json"
+          "File": "motions/mail.motion3.json"
         }
       ],
       "main_1": [
@@ -37,24 +49,14 @@
           "File": "motions/main_2.motion3.json"
         }
       ],
-      "wedding": [
+      "main_3": [
         {
-          "File": "motions/wedding.motion3.json"
+          "File": "motions/main_3.motion3.json"
         }
       ],
-      "effect": [
+      "mission": [
         {
-          "File": "motions/effect.motion3.json"
-        }
-      ],
-      "touch_body": [
-        {
-          "File": "motions/touch_body.motion3.json"
-        }
-      ],
-      "login": [
-        {
-          "File": "motions/login.motion3.json"
+          "File": "motions/mission.motion3.json"
         }
       ],
       "mission_complete": [
@@ -62,27 +64,28 @@
           "File": "motions/mission_complete.motion3.json"
         }
       ],
-      "main_3": [
+      "touch_body": [
         {
-          "File": "motions/main_3.motion3.json"
-        }
-      ],
-      "mail": [
-        {
-          "File": "motions/mail.motion3.json"
-        }
-      ],
-      "home": [
-        {
-          "File": "motions/home.motion3.json"
+          "File": "motions/touch_body.motion3.json"
         }
       ],
       "touch_head": [
         {
           "File": "motions/touch_head.motion3.json"
         }
+      ],
+      "touch_special": [
+        {
+          "File": "motions/touch_special.motion3.json"
+        }
+      ],
+      "wedding": [
+        {
+          "File": "motions/wedding.motion3.json"
+        }
       ]
-    }
+    },
+    "Expressions": []
   },
   "Groups": [
     {
@@ -90,9 +93,9 @@
       "Name": "EyeBlink",
       "Ids": [
         "Param186",
-        "ParamEyeROpen",
+        "Param197",
         "ParamEyeLOpen",
-        "Param197"
+        "ParamEyeROpen"
       ]
     },
     {
@@ -105,16 +108,16 @@
   ],
   "HitAreas": [
     {
-      "Id": "TouchSpecial",
-      "Name": "touch_special"
-    },
-    {
       "Id": "TouchBody",
       "Name": "touch_body"
     },
     {
       "Id": "TouchHead",
       "Name": "touch_head"
+    },
+    {
+      "Id": "TouchSpecial",
+      "Name": "touch_special"
     }
   ]
 }

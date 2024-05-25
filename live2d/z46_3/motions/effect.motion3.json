@@ -5,6 +5,8 @@
     "Fps": 30.0,
     "Loop": true,
     "AreBeziersRestricted": true,
+    "FadeInTime": 0.0,
+    "FadeOutTime": 0.0,
     "CurveCount": 3,
     "TotalSegmentCount": 7,
     "TotalPointCount": 9,
@@ -15,6 +17,8 @@
     {
       "Target": "Parameter",
       "Id": "ParamPAngel",
+      "FadeInTime": -1.0,
+      "FadeOutTime": -1.0,
       "Segments": [
         0,
         0,
@@ -35,6 +39,8 @@
     {
       "Target": "Parameter",
       "Id": "ParamParticular",
+      "FadeInTime": -1.0,
+      "FadeOutTime": -1.0,
       "Segments": [
         0,
         0,
@@ -50,6 +56,8 @@
     {
       "Target": "Parameter",
       "Id": "ParamPTransparent",
+      "FadeInTime": -1.0,
+      "FadeOutTime": -1.0,
       "Segments": [
         0,
         1,
