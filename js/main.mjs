@@ -21,30 +21,38 @@ function init_model_selector() {
     let model_selector = $('#model-select');
 
     for (let i = 0; i < live2d_models.length; i++) {
-        let option = new Option(live2d_models[i].name, i, false, false);
+        let shipmodel_img = document.createElement('img');
 
-        if (cookies.cache.model.includes(live2d_models[i].name)) {
-            option.selected = true;
+        let model_name = live2d_models[i].name;
+        let shipmodel_name;
+        if (model_name.includes('hx')) {
+            shipmodel_name = model_name.replace('_hx', '');
+            shipmodel_img.classList.add('shipmodel-img-hx');
+        } else {
+            shipmodel_name = model_name;
         }
 
-        model_selector.options.add(option);
+        shipmodel_img.classList.add('shipmodel-img');
+        shipmodel_img.src = `./shipmodels/${shipmodel_name}.png`;
+        shipmodel_img.title = model_name;
+        shipmodel_img.dataset.i = i;
+
+        shipmodel_img.onclick = async (e) => {
+            $('#loading').style.visibility = 'visible';
+
+            const i = e.target.dataset.i;
+            const path = `${live2d_models[i].path}/${live2d_models[i].name}.model3.json`;
+            await load_model(path);
+
+            cookies.cache.model = path;
+            cookies.save();
+
+            update_motion_list();
+            $('#loading').style.visibility = 'hidden';
+        };
+
+        model_selector.appendChild(shipmodel_img);
     }
-
-    model_selector.onchange = async (e) => {
-        let index = e.target.value;
-        let path = `${live2d_models[index].path}/${live2d_models[index].name}.model3.json`;
-
-        $('#loading').style.visibility = 'visible';
-        $('#loading').style.backgroundImage = `url("${rand_val(loadingbgs).path}")`;
-
-        await load_model(path);
-
-        cookies.cache.model = path;
-        cookies.save();
-
-        update_motion_list();
-        $('#loading').style.visibility = 'hidden';
-    };
 }
 
 function init_hitareas_checkbox() {
