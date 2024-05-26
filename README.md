@@ -1,7 +1,12 @@
 # AzurLane-Live2D-Viewer
-## 說明
-實現碧藍L2D開場動畫、觸摸動畫  
-外加背景圖片跟縮放功能(良心  
+- 最新的(v.827)版本的碧藍航線Live2D模型
+- 操作簡便
+- 自動記錄上次查看模型
+
+## 網頁操作說明
+- 滾輪縮放
+- 滑鼠中鍵重新定位模型
+- 左鍵可拖曳模型
 
 ## 拆包
 我用的是Asset Studio的民間版本：[AssetStudioMod](https://github.com/aelurum/AssetStudio)
@@ -9,14 +14,6 @@
 而且聽說UnityLive2DExtractor拆不出來，AssetStudio也不會再更新  
 所以跳槽了  
 這個版本拆出來的品質好太多
-
-## 展示網頁操作說明
-- 滾輪縮放
-- 滑鼠中鍵重新定位Model
-- 左鍵可拖曳Model
-- Model名稱都是漢拼，請自行想像(?
-- 背景、Model載入時間較久，勿噴
-- 有Cookie記錄，我才不管你接不接受
 
 ## 心得
 HitArea如何實現困擾我很久，爬文也沒有東西  
@@ -35,8 +32,6 @@ https://gitgud.io/alg-wiki/azurlanel2dviewer
 可以使用根目錄下的`add_hitareas.py`來自動加入HitAreas
 
 ## TODO
-
-1. 實裝Q版人物圖示
-2. 加個關於頁面
+1. 加個關於頁面
 
 ## 有bug歡迎提出
