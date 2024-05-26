@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./readme_assets/banner.gif">
+</p>
+
 # AzurLane-Live2D-Viewer
 - 最新的(v.827)版本的碧藍航線Live2D模型
 - 操作簡便
