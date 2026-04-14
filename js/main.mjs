@@ -73,7 +73,11 @@ function update_motion_list() {
 
     for (let motion of motions) {
         let button = document.createElement('button');
-        button.innerHTML = motion;
+        const readableMotion = motion.replaceAll('_', ' ') // Add spaces
+            .replace(/\b\w/g, character => character.toUpperCase()) // Capitalize words
+            .replace(/(?<![ 0-9])(?=[0-9])|(?<=[0-9])(?![ 0-9])/g, ' ') // Add spaces around numbers
+            .trim();
+        button.innerHTML = readableMotion;
         button.classList.add('control');
         button.onclick = () => {
             if (!window.model) return;
