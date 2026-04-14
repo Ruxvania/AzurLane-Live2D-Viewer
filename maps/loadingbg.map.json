@@ -1,1 +1,52 @@
-[{"name": "bg_1.png", "path": "loadingbg/bg_1.png", "type": "file"}, {"name": "bg_10.png", "path": "loadingbg/bg_10.png", "type": "file"}, {"name": "bg_11.png", "path": "loadingbg/bg_11.png", "type": "file"}, {"name": "bg_12.png", "path": "loadingbg/bg_12.png", "type": "file"}, {"name": "bg_2.png", "path": "loadingbg/bg_2.png", "type": "file"}, {"name": "bg_4.png", "path": "loadingbg/bg_4.png", "type": "file"}, {"name": "bg_5.png", "path": "loadingbg/bg_5.png", "type": "file"}, {"name": "bg_6.png", "path": "loadingbg/bg_6.png", "type": "file"}, {"name": "bg_7.png", "path": "loadingbg/bg_7.png", "type": "file"}, {"name": "bg_9.png", "path": "loadingbg/bg_9.png", "type": "file"}]
+[
+    {
+        "name": "bg_1.png",
+        "path": "loadingbg/bg_1.png",
+        "type": "file"
+    },
+    {
+        "name": "bg_10.png",
+        "path": "loadingbg/bg_10.png",
+        "type": "file"
+    },
+    {
+        "name": "bg_11.png",
+        "path": "loadingbg/bg_11.png",
+        "type": "file"
+    },
+    {
+        "name": "bg_12.png",
+        "path": "loadingbg/bg_12.png",
+        "type": "file"
+    },
+    {
+        "name": "bg_2.png",
+        "path": "loadingbg/bg_2.png",
+        "type": "file"
+    },
+    {
+        "name": "bg_4.png",
+        "path": "loadingbg/bg_4.png",
+        "type": "file"
+    },
+    {
+        "name": "bg_5.png",
+        "path": "loadingbg/bg_5.png",
+        "type": "file"
+    },
+    {
+        "name": "bg_6.png",
+        "path": "loadingbg/bg_6.png",
+        "type": "file"
+    },
+    {
+        "name": "bg_7.png",
+        "path": "loadingbg/bg_7.png",
+        "type": "file"
+    },
+    {
+        "name": "bg_9.png",
+        "path": "loadingbg/bg_9.png",
+        "type": "file"
+    }
+]
