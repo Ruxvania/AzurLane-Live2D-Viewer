@@ -1,3 +1,8 @@
+:root {
+    --taskbar-space: calc(44px + 8.5px * 2);
+    scrollbar-color: white #000000bb;
+}
+
 html,
 body {
     height: 100%;
@@ -61,6 +66,8 @@ body {
 
 #bg-select-button {
     z-index: 60;
+    max-width: none;
+    width: 240px;
 }
 
 #loading {
@@ -96,6 +103,8 @@ body {
 .flex-column {
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
+    max-height: 60vh;
 }
 
 .shipmodel-img {
@@ -104,10 +113,38 @@ body {
 }
 
 .shipmodel-img-hx {
-    filter: blur(1px);
+    filter: grayscale(100%) contrast(75%);
 }
 
 #model-select {
     max-height: 20em;
     overflow-y: scroll;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#motion-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    overflow-y: scroll;
+}
+
+#motion-list > button {
+    flex-grow: 1;
+}
+
+.flex-positioner {
+    display: flex;
+    padding-bottom: var(--taskbar-space);
+    height: calc(100% - var(--taskbar-space));
+    align-items: flex-end;
+}
+
+button {
+    background-color: #000000bb;
+    color: white;
+    border: solid 1px #1b1b1b;
+    border-radius: 5px;
 }
