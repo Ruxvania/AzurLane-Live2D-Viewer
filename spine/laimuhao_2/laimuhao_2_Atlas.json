@@ -1,0 +1,30 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 5758106410036003515
+  },
+  "m_Name": "laimuhao_2_Atlas",
+  "atlasFile": {
+    "m_FileID": 0,
+    "m_PathID": -5112280921340666655
+  },
+  "materials": [
+    {
+      "m_FileID": 0,
+      "m_PathID": 9147794445565802641
+    },
+    {
+      "m_FileID": 0,
+      "m_PathID": -3572846257200306548
+    },
+    {
+      "m_FileID": 0,
+      "m_PathID": 8859190872895767813
+    }
+  ]
+}
