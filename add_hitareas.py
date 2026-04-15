@@ -31,7 +31,8 @@ folders = os.listdir(base)
 for folder in folders:
     print("Processing " + folder)
 
-    model3Path = os.path.join(base, f"{folder}\\{folder}.model3.json")
+    model3Path = os.path.join(base, folder, f"{folder}.model3.json")
+    print(model3Path)
     if not os.path.exists(model3Path):
         print("Error: model3.json file was not detected\n")
         continue
