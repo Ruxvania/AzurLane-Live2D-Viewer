@@ -22,6 +22,8 @@ function init_model_selector() {
 
     for (let i = 0; i < live2d_models.length; i++) {
         let shipmodel_img = document.createElement('img');
+        let shipmodel_img_container = document.createElement('div');
+        shipmodel_img_container.appendChild(shipmodel_img);
 
         let model_name = live2d_models[i].name;
         let shipmodel_name;
@@ -32,6 +34,7 @@ function init_model_selector() {
             shipmodel_name = model_name;
         }
 
+        shipmodel_img_container.classList.add('shipmodel-img-container');
         shipmodel_img.classList.add('shipmodel-img');
         shipmodel_img.src = `./shipmodels/${shipmodel_name}.png`;
         shipmodel_img.title = model_name;
@@ -51,7 +54,7 @@ function init_model_selector() {
             $('#loading').style.visibility = 'hidden';
         };
 
-        model_selector.appendChild(shipmodel_img);
+        model_selector.appendChild(shipmodel_img_container);
     }
 }
 

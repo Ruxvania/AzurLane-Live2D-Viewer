@@ -112,10 +112,6 @@ body {
     max-height: 3em;
 }
 
-.shipmodel-img-hx {
-    filter: grayscale(100%) contrast(75%);
-}
-
 #model-select {
     max-height: 20em;
     overflow-y: scroll;
@@ -147,4 +143,21 @@ button {
     color: white;
     border: solid 1px #1b1b1b;
     border-radius: 5px;
+}
+
+.shipmodel-img-container { /* For positioning text */
+    position: relative;
+    text-align: center;
+}
+
+.shipmodel-img-container:has(.shipmodel-img-hx)::after {
+    content: 'CN';
+    color: white;
+    position: absolute;
+    bottom: 1px;
+    right: 50%;
+    transform: translate(50%, 0);
+    text-shadow: 0 0 2.5px black;
+    font-weight: bold;
+    font-size: small;
 }
