@@ -138,11 +138,17 @@ body {
     align-items: flex-end;
 }
 
-button {
+button,
+input[type="search"] {
     background-color: #000000bb;
     color: white;
-    border: solid 1px #1b1b1b;
+    border: solid 1px #353535;
     border-radius: 5px;
+}
+
+input[type="search"] {
+    z-index: 20;
+    padding: 5px;
 }
 
 .shipmodel-img-container { /* For positioning text */
@@ -160,4 +166,8 @@ button {
     text-shadow: 0 0 2.5px black;
     font-weight: bold;
     font-size: small;
+}
+
+.model-search-filtered {
+    display: none;
 }

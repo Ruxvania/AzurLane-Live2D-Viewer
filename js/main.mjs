@@ -1,7 +1,7 @@
 import { $, rand_val } from "./utils.mjs";
 import { cookies } from './cookie_loader.mjs'
 import { load_model } from "./model_loader.mjs";
-import { live2d_models, bgs, shipmodels, loadingbgs } from "./assets_loader.mjs";
+import { live2d_models, bgs, shipmodels, loadingbgs, live2d_model_names } from "./assets_loader.mjs";
 import { hit_area_frames } from "./pixi_canvas_initializer.mjs";
 
 load_model(cookies.cache.model).then(() => {
@@ -13,8 +13,24 @@ init_controls();
 
 function init_controls() {
     init_model_selector();
+    init_model_search();
     init_background_list();
     init_hitareas_checkbox();
+}
+
+function init_model_search() {
+    $('#model-search').addEventListener('input', (event) => {
+        const value = event.target.value;
+        Array.from($('#model-select').children).forEach((child) => {
+            const shipmodel_img = child.firstElementChild;
+            console.log(shipmodel_img.dataset.tags);
+            if (shipmodel_img.dataset.tags.split(",").some(tag => tag.toLowerCase().includes(value.toLowerCase()))) {
+                child.classList.remove('model-search-filtered');
+            } else {
+                child.classList.add('model-search-filtered');
+            }
+        });
+    })
 }
 
 function init_model_selector() {
@@ -25,13 +41,22 @@ function init_model_selector() {
         let shipmodel_img_container = document.createElement('div');
         shipmodel_img_container.appendChild(shipmodel_img);
 
-        let model_name = live2d_models[i].name;
+        let model_painting = live2d_models[i].name;
         let shipmodel_name;
-        if (model_name.includes('hx')) {
-            shipmodel_name = model_name.replace('_hx', '');
+        if (model_painting.includes('hx')) {
+            shipmodel_name = model_painting.replace('_hx', '');
             shipmodel_img.classList.add('shipmodel-img-hx');
         } else {
-            shipmodel_name = model_name;
+            shipmodel_name = model_painting;
+        }
+
+        let model_name;
+        let ship_name;
+        for (const pair of live2d_model_names) {
+            if (pair.painting === model_painting.replace('_hx', '')) {
+                model_name = pair.name;
+                ship_name = pair.ship_name;
+            }
         }
 
         shipmodel_img_container.classList.add('shipmodel-img-container');
@@ -39,6 +64,11 @@ function init_model_selector() {
         shipmodel_img.src = `./shipmodels/${shipmodel_name}.png`;
         shipmodel_img.title = model_name;
         shipmodel_img.dataset.i = i;
+
+        shipmodel_img.dataset.painting = model_painting;
+        shipmodel_img.dataset.name = model_name;
+        shipmodel_img.dataset.ship_name = ship_name;
+        shipmodel_img.dataset.tags = [model_painting, model_name, ship_name];
 
         shipmodel_img.onclick = async (e) => {
             $('#loading').style.visibility = 'visible';
