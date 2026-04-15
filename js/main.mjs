@@ -49,6 +49,11 @@ function init_model_selector() {
         } else {
             shipmodel_name = model_painting;
         }
+        for (const shipmodel_file of shipmodels) {
+            if (shipmodel_file.name.toLowerCase().replace(".png", "") === shipmodel_name.toLowerCase()) {
+                shipmodel_name = shipmodel_file.name.replace(".png", "");
+            }
+        }
 
         let model_name;
         let ship_name;

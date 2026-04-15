@@ -9733,5 +9733,10 @@
         "name": "zuozhiya_6.png",
         "path": "shipmodels/zuozhiya_6.png",
         "type": "file"
+    },
+    {
+        "name": "suweiaitongmeng_3.png",
+        "path": "shipmodels/suweiaitongmeng_3.png",
+        "type": "file"
     }
 ]
