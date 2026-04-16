@@ -1,1 +1,7 @@
-map_maker.py
+bg/
+data/
+live2d/
+loadingbg/
+maps/
+shipmodels/
+spine/
