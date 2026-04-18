@@ -13,7 +13,9 @@ window.app.view.addEventListener('mouseup', (e) => {
     if (e.button !== 0) return;
 
     // TODO: Change how main animation is called
+    if (window.model_type === "live2d") {
     window.model.motion(`main_${Math.floor(Math.random() * 3) + 1}`, 0, PIXI.live2d.MotionPriority.NORMAL);
+    }
 });
 
 window.app.view.onwheel = (e) => {

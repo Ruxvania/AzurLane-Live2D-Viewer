@@ -1,8 +1,8 @@
 
 function get_model_center() {
-    let cx = window.model.x + window.model.width / 2;
-    let cy = window.model.y + window.model.height / 2;
-    return { x: cx, y: cy };
+    let center_x = window.model.x + window.model.width / 2;
+    let center_y = window.model.y + window.model.height / 2;
+    return { x: center_x, y: center_y };
 }
 
 function resize_model() {

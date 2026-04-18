@@ -3,9 +3,18 @@ import skin_data from './data/ship_skin_template.json' with { type: 'json' };
 import skin_data_statistics from './data/ship_data_statistics.json' with { type: 'json' };
 
 const live2d_paintings = get_directories("./live2d");
+const spine_paintings = get_directories("./spine");
+const paintings = [];
+for (const painting of live2d_paintings) {
+    paintings.push(painting);
+}
+for (const painting of spine_paintings) {
+    paintings.push(painting);
+}
+
 const painting_name_map = [];
 
-for (const painting of live2d_paintings) {
+for (const painting of paintings) {
     let name;
     let skin_id;
     let ship_group;
@@ -36,7 +45,7 @@ for (const painting of live2d_paintings) {
     }
 }
 
-fs.writeFileSync('./maps/live2d_name.map.json', JSON.stringify(painting_name_map), 'utf8');
+fs.writeFileSync('./maps/painting_data.json', JSON.stringify(painting_name_map), 'utf8');
 
 function get_directories(listed_directory) {
     return fs.readdirSync(listed_directory, { withFileTypes: true }) // Returns array of "Dirent" objects apparently

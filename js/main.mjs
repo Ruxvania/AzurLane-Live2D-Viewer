@@ -1,10 +1,13 @@
 import { $, rand_val } from "./utils.mjs";
 import { cookies } from './cookie_loader.mjs'
 import { load_model } from "./model_loader.mjs";
-import { live2d_models, bgs, shipmodels, loadingbgs, live2d_model_names } from "./assets_loader.mjs";
+import { live2d_models, bgs, shipmodels, loadingbgs, painting_data, spine_models } from "./assets_loader.mjs";
 import { hit_area_frames } from "./pixi_canvas_initializer.mjs";
 
-load_model(cookies.cache.model).then(() => {
+load_model({
+    path: cookies.cache.model,
+    type: "live2d"
+}).then(() => {
     update_motion_list();
 });
 $("#bg").style.backgroundImage = `url("${cookies.cache.bg}")`;
@@ -36,12 +39,30 @@ function init_model_search() {
 function init_model_selector() {
     let model_selector = $('#model-select');
 
-    for (let i = 0; i < live2d_models.length; i++) {
+    const paintings = [];
+    for (const painting of live2d_models) {
+        paintings.push({
+            name: painting.name,
+            path: painting.path,
+            type: painting.type,
+            animation_type: "live2d"
+        });
+    }
+    for (const painting of spine_models) {
+        paintings.push({
+            name: painting.name,
+            path: painting.path,
+            type: painting.type,
+            animation_type: "spine"
+        });
+    }
+
+    for (let i = 0; i < paintings.length; i++) {
         let shipmodel_img = document.createElement('img');
         let shipmodel_img_container = document.createElement('div');
         shipmodel_img_container.appendChild(shipmodel_img);
 
-        let model_painting = live2d_models[i].name;
+        let model_painting = paintings[i].name;
         let shipmodel_name;
         if (model_painting.includes('hx')) {
             shipmodel_name = model_painting.replace('_hx', '');
@@ -57,7 +78,7 @@ function init_model_selector() {
 
         let model_name;
         let ship_name;
-        for (const pair of live2d_model_names) {
+        for (const pair of painting_data) {
             if (pair.painting === model_painting.replace('_hx', '')) {
                 model_name = pair.name;
                 ship_name = pair.ship_name;
@@ -75,18 +96,32 @@ function init_model_selector() {
         shipmodel_img.dataset.ship_name = ship_name;
         shipmodel_img.dataset.tags = [model_painting, model_name, ship_name];
 
-        shipmodel_img.onclick = async (e) => {
+        shipmodel_img.onclick = async (event) => {
+            $('#loading > p').innerText = 'Loading...';
             $('#loading').style.visibility = 'visible';
 
-            const i = e.target.dataset.i;
-            const path = `${live2d_models[i].path}/${live2d_models[i].name}.model3.json`;
-            await load_model(path);
+            const i = event.target.dataset.i;
+            let path;
+            let altasPath;
+            if (paintings[i].animation_type === "live2d") {
+                path = `${paintings[i].path}/${paintings[i].name}.model3.json`;
+            } else {
+                path = `${paintings[i].path}/${paintings[i].name}.skel`;
+                altasPath = `${paintings[i].path}/${paintings[i].name}.atlas`;
+            }
+            load_model({
+                path: path,
+                altasPath: altasPath,
+                type: paintings[i].animation_type
+            }).then(() => {
+                cookies.cache.model = path;
+                cookies.save();
 
-            cookies.cache.model = path;
-            cookies.save();
-
-            update_motion_list();
-            $('#loading').style.visibility = 'hidden';
+                update_motion_list();
+                $('#loading').style.visibility = 'hidden';
+            }).catch((error) => {
+                $('#loading > p').innerText = 'Loading Failed';
+            });
         };
 
         model_selector.appendChild(shipmodel_img_container);
@@ -102,6 +137,7 @@ function init_hitareas_checkbox() {
 
 function update_motion_list() {
     if (!window.model) return;
+    if (window.model_type !== "live2d") return;
 
     let motion_list = $("#motion-list");
     motion_list.innerHTML = "";
